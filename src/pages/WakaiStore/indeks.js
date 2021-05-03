@@ -42,10 +42,10 @@ const WakaiStore = ({navigation})=> {
             <Separator />
             <View style={styless.bingkai}>
             <Text style={{fontWeight:'bold',fontSize:19, marginTop:5, marginLeft: 99}}>Wakai</Text>
-             <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Kota Tangerang Selatan</Text>
+             <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Kota Jakarta Timur</Text>
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Produk Tersedia</Text>
             </View>
-            <Image source={wakai} style={{marginTop:-70, marginLeft: 20}} />
+            <Image source={wakai} style={{marginTop:-75, marginLeft: 15}} />
 
             <View>
       <Text style={{marginLeft: 20, marginTop: 23, fontSize: 15}}>

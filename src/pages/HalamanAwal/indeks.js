@@ -22,7 +22,7 @@ const HalamanAwal = ({navigation})=> {
         <ScrollView>
         <View style={styless.page}>
             <View style={{flexDirection:'row'}}>
-            <Text style={styless.title}>Sepatu Lokal kita</Text>         
+            <Text style={styless.title}>Sepatu Lokal Kita</Text>         
             <Favorite
             onPress={()=> handleGoTo('Favoriteuser')} 
             />

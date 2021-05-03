@@ -44,7 +44,7 @@ const EigerStore = ({navigation})=> {
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Kota Tangerang Selatan</Text>
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Produk Tersedia</Text>
             </View>
-            <Image source={eiger} style={{marginTop:-70, marginLeft: 20}} />
+            <Image source={eiger} style={{marginTop:-75, marginLeft: 15}} />
 
             <View>
       <Text style={{marginLeft: 20, marginTop: 23, fontSize: 15}}>
