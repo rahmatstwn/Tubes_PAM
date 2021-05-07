@@ -6,7 +6,7 @@ const Register = ()=> {
     const [form, setForm] = useState ({
         fullName : '',
         username: '',
-        password: '',
+        password: '',           
     });
     const sendData = () => {
         console.log('data yang dikirim', form);
