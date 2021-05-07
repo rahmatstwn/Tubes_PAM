@@ -45,7 +45,7 @@ const YongkiStore = ({navigation})=> {
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Kota Tangerang Selatan</Text>
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Produk Tersedia</Text>
             </View>
-            <Image source={yongki} style={{marginTop:-70, marginLeft: 20}} />
+            <Image source={yongki} style={{marginTop:-75, marginLeft: 15}} />
 
             <View>
       <Text style={{marginLeft: 20, marginTop: 23, fontSize: 15}}>
@@ -131,7 +131,7 @@ const YongkiStore = ({navigation})=> {
       <View style={{flexDirection : 'column'}}>
       <TouchableOpacity style={{marginTop: 1, marginBottom: 5, marginLeft:30, borderWidth : 1, padding: 3, alignItems: 'center'}}>
         <Tomboltomkins 
-            onPress={()=> handleGoTo('TomkisStore')} 
+            onPress={()=> handleGoTo('TomkinsStore')} 
             />
 
       </TouchableOpacity>
