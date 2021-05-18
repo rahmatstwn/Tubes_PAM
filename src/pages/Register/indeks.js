@@ -1,72 +1,103 @@
-import React, { useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
-import { Input, Button } from '../../components/indeks';
+import React, {Component} from 'react'
+import { Button, Container, Grid, TextField } from '@material-ui/core'
+import { Link } from 'react-router-dom'
+import { firebaseAuthentication } from '../../config/firebase'
+import { Text, View, Image, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 
-const Register = ()=> {
-    const [form, setForm] = useState ({
-        fullName : '',
-        username: '',
-        password: '',
-    });
-    const sendData = () => {
-        console.log('data yang dikirim', form);
+export default class Register extends Component{
+    state = {
+        email:'',
+        password: ''
     }
-    const onInputChange = (value, input) => {
-        setForm({
-            ...form,
-            [input ] : value,        
-        });
-    };
+    handleChangeField = (e) =>{
+        this.setState({[e.target.name]: e.target.value})
+    }
 
-    return(
-        <View style={styles.wrapper.page}>
-            <ScrollView>
-            <View style={styles.ilustration} />
-            <Text style={styles.text.desc}>
-                Mohon Mengisi beberapa data untuk Proses pendaftaran anda
-            </Text>
-            <View style={styles.space(64)}/>
-            <Input placeholder="Nama lengkap" value={form.fullName} onChangeText={(value) => onInputChange(value, 'fullName')} />
-            <View style={styles.space(33)} />
-            <Input placeholder="Username" value={form.username} onChangeText={(value) => onInputChange(value, 'username' )} />
-            <View style={styles.space(33)}  />
-            <Input placeholder="Password" value={form.password} onChangeText={(value) => onInputChange(value, 'password' )} 
-            secureTextEntry={true} />
-            <View style={styles.space(60)}  />
-            <Button title="Daftar" onPress={sendData} />
-            </ScrollView>           
-        </View>
-    );
-};
-
-const styles = {
-    wrapper: {
-        page: {
-            padding:20,
-        }, 
-    },  
-    ilustration: {
-        width:106,
-        height: 115,
-        backgroundColor: 'purple',
-        marginTop:20,
-    },
-    text: {
-        desc: {
-            fontSize:14,
-            fontWeight: 'bold',
-            color: '#A55EEA',
-            marginTop: 16,
-            maxWidth: 200,
-        },
-    },
-
-    space: value => {
-        return {
-            height:value,
-        };
-    },
-};
-
-
-export default Register;
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        const {email, password} = this.state
+        firebaseAuthentication.createUserWithEmailAndPassword(email, password)
+        .then(res=>{
+            firebaseAuthentication.currentUser.sendEmailVerification()
+            .then(()=>{
+                alert('Mohon verifikasi email anda');
+                this.props.history.push('/Login');
+            })
+            .catch((error)=>{
+                alert(error.message)
+            })
+        })
+        .catch(err=>{
+            alert(err.message)
+        })
+    }
+    /*render(){
+        const {email, password} = this.state
+        return(
+            <Container>
+                <Grid container justify="center">
+                    <Grid xs="12" md="8" lg="4">
+                        <h2>Halaman Registrasi / Daftar / Sign Up</h2>
+                        <form onSubmit={this.handleSubmit}>
+                            <TextField type="email" fullWidth margin="dense" variant="outlined" size="small" value={email} onChange={this.handleChangeField} name="email" label="Email" required />
+                            <TextField type="password" fullWidth margin="dense" variant="outlined" size="small" value={password} onChange={this.handleChangeField} name="password" label="Password" required />
+                            <Button type="submit" fullWidth variant="contained" color="primary">Registrasi</Button>
+                        </form>
+                        <p>Sudah punya akun? <Link to="/login">Login</Link></p>
+                    </Grid>
+                </Grid>
+            </Container>
+        )
+    }*/
+    render() {
+        return (
+        <View style={styles.container}>
+          
+          <TextInput
+          placeholder="Enter Email"
+          style={{width:250,margin:10, borderColor:"#333", 
+          borderWidth:1}}	
+          underlineColorAndroid="transparent"
+          onChangeText= {email => this.setState({email})}
+          />
+          
+          <TextInput
+          placeholder="Enter Password"
+          style={{width:250,margin:10, borderColor:"#333", 
+          borderWidth:1}}	
+          underlineColorAndroid="transparent"
+          onChangeText= {password => this.setState({password})}
+          />
+          
+          <TouchableOpacity
+            onPress={this.handleSubmit}
+            style={{width:250,padding:10, backgroundColor:'magenta',
+            alignItems:'center'}}>
+          <Text style={{color:'#fff'}}>Signup</Text>
+          </TouchableOpacity>
+          
+          
+         </View>
+      
+       );
+      }
+    }
+    
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+      },
+      welcome: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+      },
+      instructions: {
+        textAlign: 'center',
+        color: '#333333',
+        marginBottom: 5,
+      },
+    });
