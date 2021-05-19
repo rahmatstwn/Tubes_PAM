@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Catalog Sepatu",
-    "slug": "Catalog Sepatu",
+    "name": "CatalogSepatu",
+    "slug": "CatalogSepatu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,7 +24,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.Pam(ali).Catalog Sepatu",
+      "package": "com.Pam_ali.CatalogSepatu",
       "versionCode": 1
     },
     "web": {
