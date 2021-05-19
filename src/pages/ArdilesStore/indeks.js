@@ -14,6 +14,8 @@ import Tombolwakai from '../EigerStore/tombolwakai';
 import Tomboleiger from '../TomkinsStore/tomboleiger'; 
 import Tomboltomkins from '../EigerStore/tomboltomkins';
 import Tombolback from '../EigerStore/tombolback';
+import {ardiles3,ardiles5,ardiles2,ardiles4,ardiles6} from '../../assets/indeks';
+
 
 const Separator = () => (
     <View style={styless.Separator} />
@@ -66,9 +68,9 @@ const ArdilesStore = ({navigation})=> {
           </Text>
          
           <View style={styless.kotakKIRI}>
-          <Ardiles3
-            onPress={()=> handleGoTo('ArdilesSepatu')} 
-            />
+            <TouchableOpacity>
+            <Image source={ardiles3} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10,}}>
           Ardiles Men Robtras Se...
@@ -78,9 +80,9 @@ const ArdilesStore = ({navigation})=> {
           </Text>
          
           <View style={styless.kotakKIRI}>
-          <Ardiles5
-            onPress={()=> handleGoTo('ArdilesSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={ardiles5} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           Ardiles Men Beckman S...
@@ -92,9 +94,9 @@ const ArdilesStore = ({navigation})=> {
       </View>
       <View style={{flexDirection:'column'}}>
         <View style={styless.kotakKANAN}>
-        <Ardiles2
-            onPress={()=> handleGoTo('ArdilesSepatu')} 
-            />
+        <TouchableOpacity>
+            <Image source={ardiles2} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Ardiles Men Scleropta...
@@ -104,9 +106,9 @@ const ArdilesStore = ({navigation})=> {
           </Text>
         
           <View style={styless.kotakKANAN}>
-          <Ardiles4
-            onPress={()=> handleGoTo('ArdilesSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={ardiles4} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Ardiles Men Glareola S...
@@ -116,9 +118,9 @@ const ArdilesStore = ({navigation})=> {
           </Text>
           
           <View style={styless.kotakKANAN}>
-          <Ardiles6
-            onPress={()=> handleGoTo('ArdilesSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={ardiles6} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Ardiles Men Nataku Se...

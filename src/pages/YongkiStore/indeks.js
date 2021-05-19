@@ -14,7 +14,7 @@ import Tombolwakai from '../EigerStore/tombolwakai';
 import Tomboleiger from '../TomkinsStore/tomboleiger'; 
 import Tomboltomkins from '../EigerStore/tomboltomkins';
 import TombolBack from '../EigerStore/tombolback';
-
+import {yongki2,yongki3,yongki4,yongki5,yongki6} from '../../assets/indeks';
 
 const Separator = () => (
     <View style={styless.Separator} />
@@ -42,7 +42,7 @@ const YongkiStore = ({navigation})=> {
             <Separator />
             <View style={styless.bingkai}>
             <Text style={{fontWeight:'bold',fontSize:19, marginTop:5, marginLeft: 99}}>Yongki Komaladi</Text>
-             <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Kota Tangerang Selatan</Text>
+             <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Kota Jakarta Pusat</Text>
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 99}}>Produk Tersedia</Text>
             </View>
             <Image source={yongki} style={{marginTop:-75, marginLeft: 15}} />
@@ -66,9 +66,9 @@ const YongkiStore = ({navigation})=> {
           Rp, 199.000
           </Text>
           <View style={styless.kotakKIRI}>
-          <Yongkii3
-            onPress={()=> handleGoTo('YongkiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={yongki3} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           YONGKI KOMALADI PANT..
@@ -77,9 +77,9 @@ const YongkiStore = ({navigation})=> {
           Rp, 799.000
           </Text>
           <View style={styless.kotakKIRI}>
-          <Yongkii5
-            onPress={()=> handleGoTo('YongkiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={yongki5} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           YONGKI KOMALADI SSC...
@@ -90,9 +90,9 @@ const YongkiStore = ({navigation})=> {
       </View>
       <View style={{flexDirection:'column'}}>
         <View style={styless.kotakKANAN}>
-        <Yongkii2
-            onPress={()=> handleGoTo('YongkiSepatu')} 
-            />
+        <TouchableOpacity>
+            <Image source={yongki2} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           YONGKI KOMALADI BO....
@@ -101,9 +101,9 @@ const YongkiStore = ({navigation})=> {
           Rp, 179.000
           </Text>
           <View style={styless.kotakKANAN}>
-          <Yongkii4
-            onPress={()=> handleGoTo('YongkiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={yongki4} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           YONGKI KOMALADI OL-....
@@ -112,9 +112,9 @@ const YongkiStore = ({navigation})=> {
           Rp, 179.000
           </Text>
           <View style={styless.kotakKANAN}>
-          <Yongkii6
-            onPress={()=> handleGoTo('YongkiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={yongki6} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           YONGKI KOMALADI F-....

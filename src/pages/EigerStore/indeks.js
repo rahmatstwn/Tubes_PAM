@@ -14,6 +14,7 @@ import Tombolyongki from './tombolyongki';
 import Tombolwakai from './tombolwakai';
 import Tomboltomkins from './tomboltomkins'; 
 import TombolBack from './tombolback';
+import {eiger2,eiger3,eiger4,eiger5,eiger6} from '../../assets/indeks';
 
 const Separator = () => (
     <View style={styless.Separator} />
@@ -65,9 +66,9 @@ const EigerStore = ({navigation})=> {
             Rp 719.100,00
           </Text>
           <View style={styless.kotakKIRI}>
-          <Tombolbrand3
-            onPress={()=> handleGoTo('EigerSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={eiger3} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           Eiger Tigre Shoes Home..
@@ -76,9 +77,9 @@ const EigerStore = ({navigation})=> {
           Rp, 619,650
           </Text>
           <View style={styless.kotakKIRI}>
-          <Tombolbrand5
-            onPress={()=> handleGoTo('EigerSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={eiger5} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           Eiger Cloudrun 2.0 Sho...
@@ -89,9 +90,9 @@ const EigerStore = ({navigation})=> {
       </View>
       <View style={{flexDirection:'column'}}>
         <View style={styless.kotakKANAN}>
-        <Tombolbrand2
-            onPress={()=> handleGoTo('EigerSepatu')} 
-            />
+        <TouchableOpacity>
+            <Image source={eiger2} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Eiger Tiger Claw Gray-...
@@ -100,9 +101,9 @@ const EigerStore = ({navigation})=> {
           Rp, 649,000
           </Text>
           <View style={styless.kotakKANAN}>
-          <Tombolbrand4
-            onPress={()=> handleGoTo('EigerSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={eiger4} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Eiger Natoas Mid 2.5 S...
@@ -111,9 +112,9 @@ const EigerStore = ({navigation})=> {
           Rp, 539,100
           </Text>
           <View style={styless.kotakKANAN}>
-          <Tombolbrand6
-            onPress={()=> handleGoTo('EigerSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={eiger6} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Eiger Eagle Plum 2.0-B..

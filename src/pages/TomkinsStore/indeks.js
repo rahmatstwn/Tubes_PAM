@@ -14,6 +14,7 @@ import Tombolyongki from '../EigerStore/tombolyongki';
 import Tombolwakai from '../EigerStore/tombolwakai';
 import Tomboleiger from './tomboleiger'; 
 import Tombolback from '../EigerStore/tombolback';
+import {tomkins2,tomkins3,tomkins4,tomkins5,tomkins6} from '../../assets/indeks';
 
 const Separator = () => (
     <View style={styless.Separator} />
@@ -65,9 +66,9 @@ const TomkinsStore = ({navigation})=> {
           Rp, 440.000
           </Text>
           <View style={styless.kotakKIRI}>
-          <Tomkinss3
-            onPress={()=> handleGoTo('TomkinsSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={tomkins3} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           TOMKINS Kin - 33
@@ -76,9 +77,9 @@ const TomkinsStore = ({navigation})=> {
           Rp, 430.000
           </Text>
           <View style={styless.kotakKIRI}>
-          <Tomkinss5
-            onPress={()=> handleGoTo('TomkinsSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={tomkins5} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           TOMKINS Parabellum C...
@@ -89,9 +90,9 @@ const TomkinsStore = ({navigation})=> {
       </View>
       <View style={{flexDirection:'column'}}>
         <View style={styless.kotakKANAN}>
-        <Tomkinss2
-            onPress={()=> handleGoTo('TomkinsSepatu')} 
-            />
+        <TouchableOpacity>
+            <Image source={tomkins2} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           TOMKINS Parabellum-R.
@@ -100,9 +101,9 @@ const TomkinsStore = ({navigation})=> {
           Rp, 152.000
           </Text>
           <View style={styless.kotakKANAN}>
-          <Tomkinss4
-            onPress={()=> handleGoTo('TomkinsSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={tomkins4} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           TOMKINS Joker - Black..
@@ -111,9 +112,9 @@ const TomkinsStore = ({navigation})=> {
           Rp, 370.000
           </Text>
           <View style={styless.kotakKANAN}>
-          <Tomkinss6
-            onPress={()=> handleGoTo('TomkinsSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={tomkins6} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           TOMKINS Prodigy Alph...

@@ -14,6 +14,7 @@ import Tombolyongki from '../EigerStore/tombolyongki';
 import Tomboleiger from '../TomkinsStore/tomboleiger'; 
 import Tomboltomkins from '../EigerStore/tomboltomkins';
 import TombolBack from '../EigerStore/tombolback';
+import {wakai2,wakai3,wakai4,wakai5,wakai6} from '../../assets/indeks';
 
 
 const Separator = () => (
@@ -66,9 +67,9 @@ const WakaiStore = ({navigation})=> {
           Rp, 233.500
           </Text>
           <View style={styless.kotakKIRI}>
-          <Wakaii3
-            onPress={()=> handleGoTo('WakaiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={wakai3} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           Footwear Man Wakai F..
@@ -77,9 +78,9 @@ const WakaiStore = ({navigation})=> {
           Rp, 179.300
           </Text>
           <View style={styless.kotakKIRI}>
-          <Wakaii5
-            onPress={()=> handleGoTo('WakaiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={wakai5} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:30, fontSize: 10}}>
           Footwear Pria Sneakers..
@@ -90,9 +91,9 @@ const WakaiStore = ({navigation})=> {
       </View>
       <View style={{flexDirection:'column'}}>
         <View style={styless.kotakKANAN}>
-        <Wakaii2
-            onPress={()=> handleGoTo('WakaiSepatu')} 
-            />
+        <TouchableOpacity>
+            <Image source={wakai2} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Footwear Men Wakai F...
@@ -101,9 +102,9 @@ const WakaiStore = ({navigation})=> {
           Rp, 179.300
           </Text>
           <View style={styless.kotakKANAN}>
-          <Wakaii4
-            onPress={()=> handleGoTo('WakaiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={wakai4} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Wakai FW01804 UMIKA...
@@ -112,9 +113,9 @@ const WakaiStore = ({navigation})=> {
           Rp, 171.300
           </Text>
           <View style={styless.kotakKANAN}>
-          <Wakaii6
-            onPress={()=> handleGoTo('WakaiSepatu')} 
-            />
+          <TouchableOpacity>
+            <Image source={wakai6} style={{width: 150,height: 150}}/>
+            </TouchableOpacity>
         </View>
           <Text style={{marginLeft:7.8, fontSize: 10}}>
           Footwear Man Wakai F...
