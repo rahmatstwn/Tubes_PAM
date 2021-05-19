@@ -35,7 +35,7 @@ const HalamanAwal = ({navigation})=> {
             <View style={{flexDirection:'row'}}>
             <Text style={{fontWeight:'light',fontSize:20, marginTop:5, marginLeft: 10}}>Paling Laris!!!</Text>
             <Tombolproduk
-            onPress={()=> handleGoTo('Login')} 
+            onPress={()=> handleGoTo('EigerSepatu')} 
             />
             </View>
             <Text style={{fontWeight: 'light',fontSize:15, marginTop:1, marginLeft: 10, color: '#005BAE'}}>Rp, 719,100</Text>

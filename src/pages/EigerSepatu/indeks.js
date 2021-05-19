@@ -12,6 +12,28 @@ import Tombolback from '../EigerStore/tombolback';
 
 
 
+const url = "http://192.168.0.104/api/api.php";
+
+  const saveToFavorite = () => {
+
+    var urlAksi = url + "/?op=create";
+
+    fetch(urlAksi, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body:"nama="+this.state.nama+"&harga="+this.state.harga
+    })
+      .then((response) => response.json())
+      .then((json)=>{
+        this.setState({nama:''});
+        this.setState({harga:''});
+        this.ambilListData();
+  })
+
+}
+
 const Separator = () => (
     <View style={styless.Separator} />
 ); 
@@ -43,6 +65,9 @@ const EigerSepatu = ({navigation})=> {
             <Text style={{fontWeight:'bold',fontSize:15, marginTop:5, marginLeft: 40}}>Eiger 1989 Chamba Shoes - Olive </Text>
              <Text style={{fontWeight: 'light',fontSize:10, marginTop:1, marginLeft: 40}}>50+ Wishlist</Text>
              <Text style={{fontWeight: 'light',fontSize:20, marginTop:1, marginLeft: 40, color: '#005BAE'}}>Rp, 719,100</Text>
+           
+
+
             <Text style={{marginTop:10}}></Text>
             <CollapsibleView title="Detail" >
             <Text>Kondisi: Baru</Text> 
