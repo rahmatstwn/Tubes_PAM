@@ -34,6 +34,8 @@ export default class Login extends Component{
         <TextInput
         placeholder="Enter Email"
         style={{width:200, margin:10}}
+        autoCapitalize='none'
+        autoCorrect={false}
         //value={email} onChangeText={this.handleChangeField} name="email" required
         onChangeText={email => this.setState({email})}
         />
@@ -41,6 +43,8 @@ export default class Login extends Component{
         <TextInput
         placeholder="Enter Password"
         style={{width:200, margin:10}}
+        autoCapitalize='none'
+        autoCorrect={false}
         //value={password} onChangeText={this.handleChangeField} name="password" required
         onChangeText={password => this.setState({password})}
         />

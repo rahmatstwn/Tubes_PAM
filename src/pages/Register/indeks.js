@@ -16,7 +16,7 @@ export default class Register extends Component{
             firebaseAuthentication.currentUser.sendEmailVerification()
             .then(()=>{
                 alert('Mohon verifikasi email anda');
-                this.props.history.push('/Login');
+                this.props.navigation.navigate("Login");
             })
             .catch((error)=>{
                 alert(error.message)
@@ -37,6 +37,8 @@ export default class Register extends Component{
           borderWidth:1}}	
           underlineColorAndroid="transparent"
           onChangeText= {email => this.setState({email})}
+          autoCapitalize='none'
+          autoCorrect={false}
           />
           
           <TextInput
@@ -45,6 +47,8 @@ export default class Register extends Component{
           borderWidth:1}}	
           underlineColorAndroid="transparent"
           onChangeText= {password => this.setState({password})}
+          autoCapitalize='none'
+          autoCorrect={false}
           />
           
           <TouchableOpacity
